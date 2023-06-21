@@ -13,7 +13,7 @@ This was built using the MERN stack, which includes MongoDB, Express.js, React, 
 - Responsive design
 - react-bootstrap
 
-# Getting started
+# Getting started in the backend
     //clone the repo
     git clone https://github.com/IzaanArain/EMS-summer-2023-Project-backend.gitExercise-Tracker-Backend.git
     // install dependenacies
@@ -22,11 +22,33 @@ This was built using the MERN stack, which includes MongoDB, Express.js, React, 
    MONGO_URI="your URI here"
    JWT_SECRET="your secret key"
 
-# Technologies used
+# Technologies used in backend
 * Node JS
   * A JavaScript runtime environment
 * Express
   * Web framework for Node JS
+* MongoDB
+  * NoSQL database for data storage
+* Mongoose
+  * Object Data Modeling (ODM) to structure the data.
+* JWT
+  * Json Web Token (JWT) for authentication
+* REST API
+  * Api endpoint with POST, GET, PUT, and DELETE.
+* Bcrypt
+  * Used for hashing password to store in the db.
+* jsonwebtoken
+  * For JWT authentication
+* cors
+  * Used to allow cross origin requests
+* dotenv
+  * Used for storing environment variables
+* Validator
+  * A library of string validators and sanitizers.Incorporate into apps for server-side data validation
+* express-async-handler
+  * Simple middleware for handling exceptions inside of async express routes and passing them to your express error handlers.
+* colors
+  * to get different color and style in the node.js console
 # User Interface
 
 ## EMS Dashboard
