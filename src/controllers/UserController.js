@@ -9,7 +9,9 @@ const createToken = (_id) => {
     return jwt.sign({ _id: _id }, process.env.SECRET_TOKEN, { expiresIn: "1d" });
   };
 
-  
+//@desc login a user
+//@route POST /api/users/login/
+//@access Public
 const loginUser=asyncHandler(async(req,res)=>{
     const {email,password}=req.body
     if(!email || !password){
@@ -44,7 +46,9 @@ const loginUser=asyncHandler(async(req,res)=>{
     // res.status(200).json({message:"you have loged in"})
 })
 
-
+//@desc register a user
+//@route POST /api/users/register/
+//@access Public
 const registerUser=asyncHandler(async(req,res)=>{
     const {fname,lname,email,password}=req.body
 

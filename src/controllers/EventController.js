@@ -2,6 +2,9 @@ const Event = require("../models/EventModel");
 const asyncHandler = require("express-async-handler");
 const mongoose = require("mongoose");
 
+//@desc fetch all events
+//@route GET /api/events/
+//@access Private
 const getAllEvents = asyncHandler(async (req, res) => {
   // const events=await Event.find()
   const events = await Event.find({ user_id: req.user._id });
@@ -9,6 +12,9 @@ const getAllEvents = asyncHandler(async (req, res) => {
   // res.status(200).json({message:"get all the events"})
 });
 
+//@desc create a single event
+//@route POST /api/events/
+//@access Private
 const addEvent = asyncHandler(async (req, res) => {
   // console.log(req.body)
   const { title, description, date, time, location } = req.body;
@@ -30,6 +36,9 @@ const addEvent = asyncHandler(async (req, res) => {
   // res.status(200).json({message:"add an event"})
 });
 
+//@desc fetch a single event
+//@route GET /api/events/:id
+//@access Private
 const getEvent = asyncHandler(async (req, res) => {
   const { id } = req.params;
   if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -47,6 +56,9 @@ const getEvent = asyncHandler(async (req, res) => {
   // res.status(200).json({message:`get an event at id ${req.params.id}`})
 });
 
+//@desc update a single event
+//@route PUT /api/activities/:id
+//@access Private
 const UpdateEvent = asyncHandler(async (req, res) => {
   const { id } = req.params;
 
@@ -77,6 +89,9 @@ const UpdateEvent = asyncHandler(async (req, res) => {
   // res.status(200).json({message:`update an event at id ${req.params.id}`})
 });
 
+//@desc delete a single event
+//@route DELETE /api/events/:id
+//@access Private
 const deleteEvent = asyncHandler(async (req, res) => {
   const { id } = req.params;
 
@@ -99,6 +114,9 @@ const deleteEvent = asyncHandler(async (req, res) => {
   // res.status(200).json({message:`delete an event at id ${req.params.id}`})
 });
 
+//@desc update values in a single event
+//@route PATCH /api/events/:id
+//@access Private
 const patchEvent = (req, res) => {
   res.status(200).json({ message: `patch an event at id ${req.params.id}` });
 };

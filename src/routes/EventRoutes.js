@@ -15,6 +15,7 @@ router.use(validateToken)
 router.route('/')
 .get(getAllEvents)
 .post(addEvent)
+.get()
 
 router.route('/:id')
 .get(getEvent)
