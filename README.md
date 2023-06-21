@@ -1,5 +1,5 @@
 # Event Management System (EMS)
-EMS is a comprehensive application designed to help users keep track of their events.It provides features such as adding, editing, reading, and deleting events, allowing users to manage their events effectively. The application follows the CRUD (Create, Read, Update, Delete) operations, ensuring that all activity-related tasks are performed correctly.
+EMS is a comprehensive application designed to help users keep track of their events.It provides features such as adding, editing, reading, and deleting events, allowing users to manage their events effectively. The application follows the CRUD (Create, Read, Update, Delete) operations, ensuring that all event-related tasks are performed correctly.
 
 To access the application's functionalities, users are required to sign up and log in. The authentication process is implemented using JSON Web Tokens (JWT), a popular method for securing web applications. Once logged in, users can view their personal events, providing a personalized experience within the application.
 
