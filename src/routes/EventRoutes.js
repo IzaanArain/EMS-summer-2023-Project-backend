@@ -5,7 +5,8 @@ const { getAllEvents,
     getEvent, 
     UpdateEvent, 
     deleteEvent, 
-    patchEvent } = require("../controllers/EventController")
+    patchEvent,
+    displayAllEvents, } = require("../controllers/EventController")
 const validateToken = require("../middleware/ValidateToken")
 
 const router=express.Router()
@@ -15,7 +16,9 @@ router.use(validateToken)
 router.route('/')
 .get(getAllEvents)
 .post(addEvent)
-.get()
+
+router.route('/eventlist')
+.get(displayAllEvents)
 
 router.route('/:id')
 .get(getEvent)

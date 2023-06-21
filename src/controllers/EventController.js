@@ -7,9 +7,17 @@ const mongoose = require("mongoose");
 //@access Private
 const getAllEvents = asyncHandler(async (req, res) => {
   // const events=await Event.find()
-  const events = await Event.find({ user_id: req.user._id });
+  const events = await Event.find({ user_id: req.user._id }).sort({ createdAt: -1 });
   res.status(200).json(events);
   // res.status(200).json({message:"get all the events"})
+});
+
+//@desc fetch all events of every user
+//@route GET /api/events/eventlist/
+//@access Private
+const displayAllEvents=asyncHandler(async(req,res)=>{
+  const events = await Event.find().sort({ createdAt: -1 });;
+  res.status(200).json(events);
 });
 
 //@desc create a single event
@@ -128,4 +136,5 @@ module.exports = {
   UpdateEvent,
   deleteEvent,
   patchEvent,
+  displayAllEvents,
 };
