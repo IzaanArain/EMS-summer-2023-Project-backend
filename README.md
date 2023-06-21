@@ -18,8 +18,6 @@ This was built using the MERN stack, which includes MongoDB, Express.js, React, 
     git clone https://github.com/IzaanArain/EMS-summer-2023-Project-backend.gitExercise-Tracker-Backend.git
     // install dependenacies
     npm install
-   
-
    // Configure environment variables
    MONGO_URI="your URI here"
    JWT_SECRET="your secret key"
