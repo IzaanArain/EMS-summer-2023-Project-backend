@@ -5,6 +5,9 @@ To access the application's functionalities, users are required to sign up and l
 
 This was built using the MERN stack, which includes MongoDB, Express.js, React, and Node.js.By leveraging these technologies, EMS offers a seamless experience for users to track their events, ensuring that their data is securely stored and easily accessible.
 
+# Deployed Link - Event Management System (EMS)
+https://ems-frontend-izaan.vercel.app
+
 ## Features
 
 - User can login/register through jwt authentication
