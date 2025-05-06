@@ -37,9 +37,9 @@ app.get("/:name", (req, res) => {
 
 PORT = process.env.PORT || 3000;
 
-// app.listen(PORT, () => {
-//   console.log(`Server connected at Port http://localhost:${PORT}/api/events/`);
-//   console.log(
-//     `Server connected at Port http://localhost:${PORT}/api/users/login`
-//   );
-// });
+app.listen(PORT, () => {
+  console.log(`Server connected at Port http://localhost:${PORT}/api/events/`);
+  console.log(
+    `Server connected at Port http://localhost:${PORT}/api/users/login`
+  );
+});
